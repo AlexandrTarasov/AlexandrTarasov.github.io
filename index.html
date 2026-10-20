@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" x-data="app()" :class="{&#39;dark&#39;:dark}" class="scroll-smooth"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta property="og:title" content=" ">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<title>Репетитор английского Alex - GET & USE</title>
+
+<script defer="" src="./Website_files/cdn.min.js.download"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Website_files/css2" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: { display: ['PT Sans','sans-serif'], body: ['DM Sans','sans-serif'] },
+      colors: { accent: '#FF6B2B', 'accent-light': '#FF8F5C' }
+    }
+  }
+}
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{font-family:'DM Sans',sans-serif}
+h1,h2,h3,h4,h5,h6{font-family:'Comic Relief',sans-serif}
+body{transition:background-color .3s,color .3s}
+
+/* noise overlay */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+
+/* scrollbar */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#FF6B2B;border-radius:99px}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* nav underline animation */
+.nl{position:relative}
+.nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:currentColor;transition:width .22s cubic-bezier(.4,0,.2,1)}
+.nl:hover::after,.nl.on::after{width:100%}
+.nl.on{font-weight:500}
+
+/* shimmer button */
+.shimmer{position:relative;overflow:hidden}
+.shimmer::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:rgba(255,255,255,.18);transform:skewX(-20deg);transition:left .4s cubic-bezier(.4,0,.2,1)}
+.shimmer:hover::after{left:160%}
+
+/* photo frames */
+.pf{overflow:hidden;background:#d4d4d8}
+.pf img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* card hover */
+.card-h{transition:transform .28s cubic-bezier(.4,0,.2,1),border-color .18s}
+.card-h:hover{transform:translateY(-4px)}
+
+/* skill tag */
+.stag{transition:border-color .18s}
+
+[x-cloak]{display:none!important}
+.dark header.scrolled{background-color:rgba(255,255,255,.95)!important}
+.dark header.scrolled>nav{color:#18181b}
+.dark header.scrolled>nav a:not(.shimmer),.dark header.scrolled>nav a:not(.shimmer) span{color:#18181b!important}
+.dark header.scrolled>div{background-color:rgba(255,255,255,.95);border-color:#e4e4e7}
+.dark header.scrolled>div a:not(.shimmer){color:#3f3f46!important}
+.dark header.scrolled>div a:not(.shimmer):hover{color:#18181b!important}
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;
+  --tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;
+  --tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;
+  --tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;
+  --tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;
+  --tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;
+  --tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;
+  --tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
+  ::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-x-0{left:0px;right:0px}.-bottom-4{bottom:-1rem}.-left-4{left:-1rem}.bottom-1\/4{bottom:25%}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.top-1\/4{top:25%}.bottom-0{bottom:0px}.z-10{z-index:10}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1\.5{margin-bottom:0.375rem}.mb-10{margin-bottom:2.5rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-14{margin-top:3.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-square{aspect-ratio:1 / 1}.h-12{height:3rem}.h-16{height:4rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-72{height:18rem}.h-9{height:2.25rem}.h-96{height:24rem}.h-full{height:100%}.h-10{height:2.5rem}.h-40{height:10rem}.h-44{height:11rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-72{width: 25rem}.w-9{width:2.25rem}.w-96{width:24rem}.w-full{width:100%}.w-10{width:2.5rem}.w-40{width:10rem}.max-w-6xl{max-width:72rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.shrink-0{flex-shrink:0}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:0.125rem}.gap-1\.5{gap:0.375rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.rounded-lg{border-radius:0.5rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-zinc-100{--tw-border-opacity:1;border-color:rgb(244 244 245 / var(--tw-border-opacity, 1))}.border-zinc-200{--tw-border-opacity:1;border-color:rgb(228 228 231 / var(--tw-border-opacity, 1))}.border-zinc-300{--tw-border-opacity:1;border-color:rgb(212 212 216 / var(--tw-border-opacity, 1))}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}.border-zinc-700{--tw-border-opacity:1;border-color:rgb(63 63 70 / var(--tw-border-opacity, 1))}
+  .bg-accent{--tw-bg-opacity:1;background-color:rgb(242 144 104 / var(--tw-bg-opacity, 1))}.bg-accent\/10{background-color:rgb(242 144 104 / 0.1)}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-zinc-100{--tw-bg-opacity:1;background-color:rgb(244 244 245 / var(--tw-bg-opacity, 1))}.bg-zinc-200{--tw-bg-opacity:1;background-color:rgb(228 228 231 / var(--tw-bg-opacity, 1))}.bg-zinc-200\/50{background-color:rgb(228 228 231 / 0.5)}.bg-zinc-50{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1))}.bg-zinc-800{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.bg-accent\/20{background-color:rgb(242 144 104 / 0.2)}.fill-current{fill:currentColor}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.p-10{padding:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}
+  .px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-16{padding-top:4rem}.pt-2{padding-top:0.5rem}.pt-8{padding-top:2rem}.font-display{font-family:CURSIVE}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.05\]{line-height:1.05}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-widest{letter-spacing:0.1em}.text-accent{--tw-text-opacity:1;color:rgb(242 144 104 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}
+  .text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}
+  .text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}
+  .text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}
+  .text-zinc-700{--tw-text-opacity:1;color:rgb(63 63 70 / var(--tw-text-opacity, 1))}
+  .text-zinc-900{--tw-text-opacity:1;color:rgb(56 91 121 / var(--tw-text-opacity, 1))}
+  
+  .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  .placeholder-zinc-600::placeholder{--tw-placeholder-opacity:1;color:rgb(82 82 91 / var(--tw-placeholder-opacity, 1))}
+  .shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
+  .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:border-accent:hover{--tw-border-opacity:1;border-color:rgb(255 107 43 / var(--tw-border-opacity, 1))}.hover\:bg-accent-light:hover{--tw-bg-opacity:1;background-color:rgb(255 143 92 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-100:hover{--tw-bg-opacity:1;background-color:rgb(244 244 245 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-50:hover{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-700:hover{--tw-bg-opacity:1;background-color:rgb(63 63 70 / var(--tw-bg-opacity, 1))}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(255 107 43 / var(--tw-text-opacity, 1))}
+  .hover\:text-zinc-900:hover{--tw-text-opacity:1;color:rgb(56 91 121 / var(--tw-text-opacity, 1))}
+  .hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}
+  .focus\:border-accent:focus{--tw-border-opacity:1;border-color:rgb(255 107 43 / var(--tw-border-opacity, 1))}
+  .focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}
+  .group:hover .group-hover\:bg-accent\/10{background-color:rgb(255 107 43 / 0.1)}
+  .group:hover .group-hover\:bg-accent\/20{background-color:rgb(255 107 43 / 0.2)}
+  .group:hover .group-hover\:text-accent{--tw-text-opacity:1;color:rgb(255 107 43 / var(--tw-text-opacity, 1))}
+  .dark\:border-zinc-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(63 63 70 / var(--tw-border-opacity, 1))}
+  .dark\:border-zinc-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}
+  .dark\:border-zinc-900:is(.dark *){--tw-border-opacity:1;border-color:rgb(24 24 27 / var(--tw-border-opacity, 1))}
+  .dark\:bg-white:is(.dark *){--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}
+  .dark\:bg-zinc-700:is(.dark *){--tw-bg-opacity:1;background-color:rgb(63 63 70 / var(--tw-bg-opacity, 1))}
+  .dark\:bg-zinc-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}
+  .dark\:bg-zinc-800\/30:is(.dark *){background-color:rgb(39 39 42 / 0.3)}
+  .dark\:bg-zinc-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}
+  .dark\:bg-zinc-900\/40:is(.dark *){background-color:rgb(24 24 27 / 0.4)}
+  .dark\:bg-zinc-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(9 9 11 / var(--tw-bg-opacity, 1))}
+  .dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}
+  .dark\:text-zinc-100:is(.dark *){--tw-text-opacity:1;color:rgb(244 244 245 / var(--tw-text-opacity, 1))}
+  .dark\:text-zinc-300:is(.dark *){--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity, 1))}
+  .dark\:text-zinc-400:is(.dark *){--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}
+  
+  .dark\:text-zinc-900:is(.dark *){--tw-text-opacity:1;color:rgb(56 91 121 / var(--tw-text-opacity, 1))}
+  .dark\:hover\:bg-zinc-200:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(228 228 231 / var(--tw-bg-opacity, 1))}
+  .dark\:hover\:bg-zinc-900:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}
+  .dark\:hover\:text-white:hover:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-end{align-items:flex-end}.sm\:self-auto{align-self:auto}}@media (min-width: 768px){.md\:order-1{order:1}.md\:order-2{order:2}.md\:row-span-2{grid-row:span 2 / span 2}.md\:flex{display:flex}.md\:inline-flex{display:inline-flex}.md\:hidden{display:none}.md\:h-80{height:18rem}.md\:w-80{width:33rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:justify-end{justify-content:flex-end}.md\:p-16{padding:4rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:h-96{height:24rem}.lg\:w-96{width:33rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}}
+  
+  .bg-white\/90 {
+    background-color: rgb(255 255 255 / 0.9);
+  }
+  .backdrop-blur-md {
+    --tw-backdrop-blur: blur(12px);
+  }
+  .flex {
+    display: flex;
+  }
+  .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+  }
+  .mr-2{margin-right: 0.5rem;}
+  .price_box {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    font-size: 1em;
+    margin-top: auto;
+    color: rgb(35 141 178);
+  }
+  .wheat{color: wheat; }
+
+</style><style></style></head>
+
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased">
+
+<!-- ═══ NAV ═══ -->
+<header class="fixed inset-x-0 top-0 z-50 transition-all duration-300" :class="sc?&#39;bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5 scrolled&#39;:&#39;&#39;">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
+
+    <a href="/" class="font-display font-bold text-xl tracking-tight relative z-10">
+      <span class="text-zinc-900 dark:text-white">GET & USE</span><!--span class="text-accent">USE</span-->
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
+      <li><a href="#services" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;services&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Варианты</a></li>
+      <li><a href="#work" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;work&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Процесс</a></li>
+      <li><a href="#about" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;about&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Обо мне</a></li>
+      <li><a href="#reviews" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;reviews&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Отзывы</a></li>
+      <li><a href="#contact" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;contact&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Контакты</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <!-- dark toggle -->
+      <button @click="dark=!dark" class="w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors" :aria-label="dark?&#39;Light mode&#39;:&#39;Dark mode&#39;" aria-label="Dark mode">
+        <svg x-show="!dark" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+        <svg x-show="dark" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+      </button>
+      <!-- связь -->
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">
+        Связь <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+      <!-- hamburger -->
+      <button @click="mm=!mm" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800" :aria-expanded="mm" aria-label="Toggle menu" aria-expanded="false">
+        <svg x-show="!mm" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg x-show="mm" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- mobile menu -->
+  <div x-show="mm" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900" style="display: none;">
+    <ul class="flex flex-col px-6 py-5 gap-4 text-sm font-medium" role="list">
+      <li><a href="#services" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Services</a></li>
+      <li><a href="#work" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Work</a></li>
+      <li><a href="#about" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">About</a></li>
+      <li><a href="https://themewagon.github.io/folio-tailwind/#reviews" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Reviews</a></li>
+      <li><a href="https://themewagon.github.io/folio-tailwind/#blog" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Blog</a></li>
+      <li><a href="https://themewagon.github.io/folio-tailwind/#contact" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Contact</a></li>
+      <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
+        <a href="https://themewagon.github.io/folio-tailwind/#contact" @click="mm=false" class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Hire me →</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+  <div class="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-1/4 left-0 w-64 h-64 bg-zinc-200/50 dark:bg-zinc-800/30 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <p class="reveal text-sm font-medium text-accent tracking-widest uppercase mb-4 in">Персональное наставничество</p>
+        <h1 class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6 in">
+          Hi. I'm Alex <span class="text-accent">Алексадр</span>
+        </h1>
+        <p class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10 in">
+          Помогаю структурировать знания <i>английского языка</i>, <strong class="font-medium text-zinc-700 dark:text-zinc-300">ликвидировать пробелы в грамматике и выстроить путь к пониманию и использованию языка.</strong>Предлагаю услуги — от разовых консультаций до системных 150-дневных программ.
+        </p>
+        <div class="reveal d3 flex flex-wrap gap-4 in">
+          <a href="#work" class="shimmer inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm">
+            Процесс работы
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-sm">Связь</a>
+        </div>
+        <div class="reveal d4 flex gap-8 mt-14 pt-8 border-t border-zinc-100 dark:border-zinc-900">
+          <button type="button" class="tefl_modal cursor-pointer text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-haspopup="dialog" aria-controls="tefl-dialog">
+            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">TEFL</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Сертификат</p>
+          </button>
+          
+          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">>10лет</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Преподавания</p></div>
+          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">USA</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Акцент</p></div>
+        </div>
+      </div>
+
+      <div class="reveal d2 flex justify-center md:justify-end in">
+        <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+          <div class="pf w-full h-full rounded-3xl">
+            <img src="./Website_files/eng_tutor.jpg" alt=" " loading="eager">
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">Eng tutor</div>
+        </div>
+      </div>
+
+    </div>
+  </div></section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-14">
+      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Что я предлагаю</p>
+      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Варианты обучения</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col">
+        <div class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+          </svg>
+
+        </div>
+        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">1 занятие</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          <ul class="space-y-3 text-sm text-gray-600 mb-8">
+             <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> 50 минут интенсивной работы</li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Экспресс-диагностика уровня</li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Разбор 1-2 конкретных тем или вопросов</li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Рекомендации по самостоятельной работе</li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Точечный разбор сложной темы или диагностика знаний.</li>
+          </ul>
+
+        </p>
+
+        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Оплаты, выгоды и рассрочки</h3>
+        <ul class="space-y-3 text-sm text-gray-600 mb-8">
+             <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> При разовой оплате 90 дней одно занятие = 13.3$ </li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> При разовой оплате 150 дней одно занятие = 12.6$</li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Рассрочка (на план 90 дней): 3 платежа по $420 (раз в 30 дней)</li>
+              <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Рассрочка (на план 150 дней): 5 платежей по $400 (раз в 30 дней)</li>
+          </ul>
+        <span class="price_box text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Платеж 15$</span>
+      </article>
+
+      <article class="reveal d2 card-h group bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-800 hover:border-accent flex flex-col">
+        <div class="w-12 h-12 flex items-center justify-center bg-zinc-800 dark:bg-zinc-700 rounded-xl mb-6 group-hover:bg-accent/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="wheat" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+          </svg>
+
+        </div>
+        <h3 class="font-display font-bold text-xl text-white mb-3">«Быстрый старт & Бытовая свобода» - 90 дней <br>A0 → A2</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          <ul class="space-y-3 text-sm text-gray-600 mb-8">
+            <li class="flex items-center text-white"><span class="text-indigo-600 mr-2">✓</span> Снятие языкового барьера и страха заговорить.</li>
+            <li class="flex items-center text-white"><span class="text-indigo-600 mr-2">✓</span> Индивидуальный план обучения</li>
+            <li class="flex items-center text-white"><span class="text-indigo-600 mr-2">✓</span> Базовый активный словарь: 800–1000 ключевых фраз.</li>
+            <li class="flex items-center text-white"><span class="text-indigo-600 mr-2">✓</span> Проверка домашних заданий и поддержка</li>
+            <li class="flex items-center text-white"><span class="text-indigo-600 mr-2">✓</span> Промежуточное тестирование результатов</li>
+          </ul>
+        </p>
+        <span class="text-white">Интенсивная программа для быстрых изменений и качественного рывка.</span>
+        <span class="price_box text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Разовый платеж: $1200<br>выгода $150</span>
+      </article>
+
+      <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col">
+        <div class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+          </svg>
+
+        </div>
+        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">«Полный прорыв к B1 (Intermediate)» — 150 дней (Рекомендуемый)</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          <ul class="space-y-3 text-sm text-gray-600 mb-8">
+            <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Интенсивность: 150 дней подряд (уроков по 50 минут + 1 час самостоятельной работы в день).</li>
+            <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Суммарный объем: 125 академических часов с преподавателем + 150 часов самостоятельной практики = 275 часов погружения.</li>
+            <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Результат A1 → B1 (Intermediate)</li>
+            <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Понимание сложных грамматических конструкций (условия, косвенная речь, пассивный залог) на автомате.</li>
+            <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Способность смотреть видео, читать статьи и слушать подкасты с пониманием до ≈ 80%.
+            </li>
+            <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span>
+              Подготовка к прохождению собеседований на английском языке и ведению деловой переписки.
+            </li>
+          </ul>
+        </p>
+        Комплексная стратегия подготовки до полного освоения предмета.
+        <span class="price_box text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Разовый платеж: $1 900 <br>(выгода $350)</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORK ═══ -->
+<section id="work" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+      <div>
+        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Процесс работы</p>
+        <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Как работает методика "Get & Use"?</h2>
+      </div>
+    </div>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+      <blockquote class="reveal d1 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800 in">
+        <div class="flex gap-0.5 mb-5" aria-label="5 stars">
+          Занятие со мной (50 минут):
+        </div>
+        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 italic"><b>✓ Get (15 мин):</b> Минимальная, самая прикладная грамматика и рабочий словарный запас без лишней терминологии.</br>
+        <b>✓ Use (35 мин):</b> Интенсивный вывод в речь. Моделирование реальных жизненных ситуаций, ролевые игры, решение практических кейсов и диалоги.</p>
+      </blockquote>
+
+      <blockquote class="reveal d2 bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-7 border border-zinc-800 in">
+        <div class="flex gap-0.5 mb-5 wheat" aria-label="5 stars">
+          Самостоятельное закрепление (ХОТЯ БЫ 60 минут в день!):
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6 italic">
+          <b>✓</b> Карточки интервального повторения для автоматизма (Anki / Quizlet).</br> 
+          <b>✓</b> Прослушивание адаптивных подкастов, короткие видео и реакция на них.</br> 
+          <b>✓</b> Выполнение практических микро-заданий и отправка голосовых сообщений.</br> 
+          <b>✓</b> И море другой активности.)</br> 
+        </p>
+
+      </blockquote>
+
+      <blockquote class="reveal d3 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800 in">
+        <div class="flex gap-0.5 mb-5" aria-label="5 stars">
+          Результат и Главный принцип методы:
+        </div>
+        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 italic">Замером показателей подводим итоги и фиксируем достигнутые цели.</br> </br> 
+          <b>Принцип: If you don't use it, you're gonna lose it.</b> Каждое слово и конструкция сразу становятся частью вашего активного словарного запаса.
+        </p>
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <div class="reveal order-2 md:order-1">
+        <div class="pf w-full h-80 md:h-96 rounded-3xl overflow-hidden">
+          <img src="./Website_files/coach of english language.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+
+      <div class="order-1 md:order-2">
+        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Обо мне</p>
+        <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">Не много обо мне<br> и методологии</h2>
+        <p class="reveal d2 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
+          Я Алексадр, персональный репетитор английского языка и просто хороший человек.) . Я знаю что обучение — это не просто зубрежка материала, а создание рабочей системы, подстроенной под ваши задачи и скорость восприятия.
+        </p>
+        <p class="reveal d3 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">
+          Я знаю что обучение — это не просто зубрежка материала, а создание рабочей системы, подстроенной под ваши задачи и скорость восприятия.
+        </p>
+        <div class="reveal d4">
+          <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">методы &amp; подходы</p>
+          <div class="flex flex-wrap gap-2" role="list" aria-label="Skills">
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="предъявление материала — отработка — самостоятельное использование.">PPP</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="вовлечение — изучение — активизация">ESA</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="задачно-ориентированное обучение">TBT</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="дотекстовый, текстовый и послетекстовый этапы">PWP</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="коммуникативный подход">CLT</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="лексический подход">The lexical approach</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent" title="сочетание методик">Principled eclecticism</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="reviews" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-14">
+      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Отзывы</p>
+      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Что говорят клиенты</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <blockquote class="reveal d1 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800">
+        <div class="flex gap-0.5 mb-5" aria-label="5 stars">
+          1
+        </div>
+        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 italic">Занятия проходят интересно и понятно, даже сложные темы объясняются простым языком. Ребёнок чувствует себя гораздо увереннее в разговорном английском!</p>
+        <footer class="flex items-center gap-3">
+          <div class="pf w-10 h-10 rounded-full shrink-0"><img src="./Website_files/review_1.png" alt="Lila Alexandrovna" loading="lazy"></div>
+          <div>
+            <p class="font-medium text-sm text-zinc-900 dark:text-white">Ольга</p>
+            <p class="text-xs text-zinc-500">Киев</p>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="reveal d2 bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-7 border border-zinc-800">
+        <div class="flex gap-0.5 mb-5" aria-label="5 stars">
+          2
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6 italic">Александр внимательно подбирает задания под мой уровень и цели. Уроки проходят в комфортной атмосфере, а прогресс заметен с каждым занятием.</p>
+        <footer class="flex items-center gap-3">
+          <div class="pf w-10 h-10 rounded-full shrink-0"><img src="./Website_files/review_2.png" alt="Thomas Renault" loading="lazy"></div>
+          <div>
+            <p class="font-medium text-sm text-white">Lila Alexandrovna</p>
+            <p class="text-xs text-zinc-500">Латвия</p>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="reveal d3 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800">
+        <div class="flex gap-0.5 mb-5" aria-label="5 stars">
+          3
+        </div>
+        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 italic">Благодря занятиям я стал лучше понимать английскую речь и увереннее говорить. Особенно нравится, что много практики и полезных примеров из жизни.</p>
+        <footer class="flex items-center gap-3">
+          <div class="pf w-10 h-10 rounded-full shrink-0"><img src="./Website_files/review_3.png" alt="Camille Dufresne" loading="lazy"></div>
+          <div>
+            <p class="font-medium text-sm text-zinc-900 dark:text-white">Алексей</p>
+            <p class="text-xs text-zinc-500">Germany</p>
+          </div>
+        </footer>
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOG ═══ -->
+<!--section id="blog" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+      <div>
+        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Thoughts</p>
+        <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">From the blog</h2>
+      </div>
+      <a href="https://themewagon.github.io/folio-tailwind/blog.html" class="reveal d1 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-accent transition-colors self-start sm:self-auto nl">All articles →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent">
+        <div class="pf w-full h-44">
+          <img src="./Website_files/photo-1555066931-4365d14bab8c" alt="Why I ditched CSS frameworks" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Design</span>
+            <span class="text-xs text-zinc-400">Mar 8, 2025</span>
+          </div>
+          <a href="https://themewagon.github.io/folio-tailwind/blog-article.html">
+            <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Why I ditched heavy CSS frameworks for Tailwind</h3>
+          </a>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">After years of fighting specificity wars, here's what finally convinced me to make the switch.</p>
+          <a href="https://themewagon.github.io/folio-tailwind/blog-article.html" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">Read more →</a>
+        </div>
+      </article>
+
+      <article class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent">
+        <div class="pf w-full h-44">
+          <img src="./Website_files/photo-1581291518633-83b4ebd1d83e" alt="Design systems" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Dev</span>
+            <span class="text-xs text-zinc-400">Feb 21, 2025</span>
+          </div>
+          <a href="https://themewagon.github.io/folio-tailwind/blog-article.html">
+            <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Building a design system from scratch in a weekend</h3>
+          </a>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Tokens, components, docs — the process I follow to spin up a coherent system in 48 hours.</p>
+          <a href="https://themewagon.github.io/folio-tailwind/blog-article.html" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">Read more →</a>
+        </div>
+      </article>
+
+      <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent">
+        <div class="pf w-full h-44">
+          <img src="./Website_files/photo-1498050108023-c5249f4df085" alt="Freelance lessons" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Freelance</span>
+            <span class="text-xs text-zinc-400">Jan 14, 2025</span>
+          </div>
+          <a href="https://themewagon.github.io/folio-tailwind/blog-article.html">
+            <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">5 lessons from my first year of full-time freelancing</h3>
+          </a>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Contracts, pricing, scope creep — the things nobody tells you before you go solo.</p>
+          <a href="https://themewagon.github.io/folio-tailwind/blog-article.html" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">Read more →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section-->
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-16 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-0 w-40 h-40 bg-accent/10 rounded-full blur-2xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative z-10 grid md:grid-cols-2 gap-12 items-start">
+
+        <div>
+          <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">На связи</p>
+          <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-5">С чего мы начнем?</h2>
+          <p class="reveal d2 text-zinc-400 leading-relaxed mb-8">Перед запуском программы мы проведем вступительный 30-минутный вводный урок-диагностику, на которой:</br></br>
+
+Точно определим вашу текущую точку А и языковые зажимы.</br>
+Составим карту тем с учетом ваших личных и профессиональных интересов.</br>
+</br></br>
+📩 Напишите мне, какой пакет (90 или 150 дней) вам ближе, и мы согласуем удобное время для вводного урока!</p>
+          <img src="Website_files/GU_logo.png">
+        </div>
+
+        <div class="reveal d2">
+          <div class="reveal d3 flex flex-col gap-4">
+            <a href="mailto:get1and1use@gmail.com" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>        
+              </span>
+              <span class="text-sm">get1and1use@gmail.com</span>
+            </a>
+            <a href="https://www.facebook.com/Tarasov.Eng.Rus.tutor" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="text-sm">facebook.com/Tarasov.Eng.Rus.tutor</span>
+            </a>
+            <a href="https://www.instagram.com/get1and1use/" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M3 12C3 7.75736 3 5.63604 4.31802 4.31802C5.63604 3 7.75736 3 12 3C16.2426 3 18.364 3 19.682 4.31802C21 5.63604 21 7.75736 21 12C21 16.2426 21 18.364 19.682 19.682C18.364 21 16.2426 21 12 21C7.75736 21 5.63604 21 4.31802 19.682C3 18.364 3 16.2426 3 12Z">
+                  </path>
+                  <path
+                    d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z">
+                  </path>
+                  <path
+                    d="M17.3748 6.75024H17.2498M17.4998 6.75024C17.4998 6.88832 17.3878 7.00024 17.2498 7.00024C17.1117 7.00024 16.9998 6.88832 16.9998 6.75024C16.9998 6.61217 17.1117 6.50024 17.2498 6.50024C17.3878 6.50024 17.4998 6.61217 17.4998 6.75024Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="text-sm">instagram.com/get1and1use</span>
+
+
+               <a href="https://wa.me/+380981796857" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M8.58815 12.3773L9.45909 11.2956C9.82616 10.8397 10.2799 10.4153 10.3155 9.80826C10.3244 9.65494 10.2166 8.96657 10.0008 7.58986C9.91601 7.04881 9.41086 7 8.97332 7C8.40314 7 8.11805 7 7.83495 7.12931C7.47714 7.29275 7.10979 7.75231 7.02917 8.13733C6.96539 8.44196 7.01279 8.65187 7.10759 9.07169C7.51023 10.8548 8.45481 12.6158 9.91948 14.0805C11.3842 15.5452 13.1452 16.4898 14.9283 16.8924C15.3481 16.9872 15.558 17.0346 15.8627 16.9708C16.2477 16.8902 16.7072 16.5229 16.8707 16.165C17 15.8819 17 15.5969 17 15.0267C17 14.5891 16.9512 14.084 16.4101 13.9992C15.0334 13.7834 14.3451 13.6756 14.1917 13.6845C13.5847 13.7201 13.1603 14.1738 12.7044 14.5409L11.6227 15.4118">
+                  </path>
+                </svg>
+              </span>
+              <span class="text-sm">@get_and_use</span>
+
+               <a href="https://t.me/alex_english_tutor_get_and_use" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M11.9854 15.4083L15.2268 19.0936C16.4277 20.4589 17.0282 21.1416 17.6567 20.9754C18.2852 20.8092 18.5008 19.9108 18.9318 18.1138L21.3229 8.1459C21.9868 5.37832 22.3187 3.99454 21.5808 3.312C20.843 2.62947 19.564 3.13725 17.0061 4.15282L5.13876 8.86449C3.09293 9.67674 2.07001 10.0829 2.00507 10.7808C1.99842 10.8522 1.99831 10.9241 2.00474 10.9955C2.06754 11.6937 3.08921 12.1033 5.13255 12.9223C6.05838 13.2934 6.5213 13.479 6.8532 13.8344C6.89052 13.8743 6.9264 13.9157 6.96078 13.9584C7.26658 14.3384 7.39709 14.8371 7.65808 15.8344L8.14653 17.701C8.4005 18.6715 8.52749 19.1568 8.86008 19.223C9.19267 19.2891 9.48225 18.8867 10.0614 18.0819L11.9854 15.4083ZM11.9854 15.4083L11.6676 15.0771C11.3059 14.7001 11.1251 14.5117 11.1251 14.2775C11.1251 14.0433 11.3059 13.8548 11.6676 13.4778L15.2406 9.75409">
+                  </path>
+                </svg>
+              </span>
+              <span class="text-sm">@alex_english_tutor_get_and_use</span>
+
+              <a href="https://www.youtube.com/@Get_and_Use" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M12 20.5C13.8097 20.5 15.5451 20.3212 17.1534 19.9934C19.1623 19.5839 20.1668 19.3791 21.0834 18.2006C22 17.0221 22 15.6693 22 12.9635V11.0365C22 8.33073 22 6.97787 21.0834 5.79937C20.1668 4.62088 19.1623 4.41613 17.1534 4.00662C15.5451 3.67877 13.8097 3.5 12 3.5C10.1903 3.5 8.45489 3.67877 6.84656 4.00662C4.83766 4.41613 3.83321 4.62088 2.9166 5.79937C2 6.97787 2 8.33073 2 11.0365V12.9635C2 15.6693 2 17.0221 2.9166 18.2006C3.83321 19.3791 4.83766 19.5839 6.84656 19.9934C8.45489 20.3212 10.1903 20.5 12 20.5Z">
+                  </path>
+                  <path
+                    d="M15.9621 12.3129C15.8137 12.9187 15.0241 13.3538 13.4449 14.2241C11.7272 15.1705 10.8684 15.6438 10.1728 15.4615C9.9372 15.3997 9.7202 15.2911 9.53799 15.1438C9 14.7089 9 13.8059 9 12C9 10.1941 9 9.29112 9.53799 8.85618C9.7202 8.70886 9.9372 8.60029 10.1728 8.53854C10.8684 8.35621 11.7272 8.82945 13.4449 9.77593C15.0241 10.6462 15.8137 11.0813 15.9621 11.6871C16.0126 11.8933 16.0126 12.1067 15.9621 12.3129Z"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <span class="text-sm">@Get_and_Use</span>
+            </a>
+
+            <a href="https://teacherrecord.com/checking/TR2188422783" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+</svg>
+
+              </span>
+              <span class="text-sm">Проверка сертификата</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<dialog id="tefl-dialog" aria-labelledby="tefl-modal-title" class="w-[calc(100%-3rem)] max-w-md rounded-2xl bg-white p-8 text-center text-zinc-900 shadow-xl dark:bg-zinc-900 dark:text-white">
+  <div class="grid">
+    <h2 id="tefl-modal-title" class="text-2xl font-bold text-zinc-900 dark:text-white">Certified educator</h2>
+    <img src="Website_files/certified english teacher.jpg">
+    <button id="tefl-dialog-close" type="button" class="mt-1 rounded-full bg-accent px-5 py-2 text-sm font-medium text-white hover:bg-accent-light transition-colors">Close</button>
+  </div>
+</dialog>
+
+<footer class="border-t border-zinc-100 dark:border-zinc-900">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-zinc-400"> © <span id="year"></span> All rights reserved.<br>
+  </div>
+</footer>
+
+<script>
+function app() {
+  return {
+    dark: false,
+    mm: false,
+    sc: false,
+    s: 'hero',
+
+    init() {
+      // dark mode
+      this.dark = localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      this.$watch('dark', v => localStorage.setItem('theme', v ? 'dark' : 'light'));
+
+      // scroll
+      window.addEventListener('scroll', () => {
+        this.sc = window.scrollY > 20;
+        this.updateSection();
+      }, { passive: true });
+
+      // reveal
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+      // year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    },
+
+    updateSection() {
+      const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 60;
+      if (atBottom) { this.s = 'contact'; return; }
+      const ids = ['contact','blog','reviews','about','work','services','hero'];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 130) { this.s = id; return; }
+      }
+    }
+  }
+}
+
+const teflDialog = document.getElementById('tefl-dialog');
+document.querySelector('.tefl_modal').addEventListener('click', () => teflDialog.showModal());
+document.getElementById('tefl-dialog-close').addEventListener('click', () => teflDialog.close());
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && teflDialog.open) teflDialog.close();
+});
+teflDialog.addEventListener('click', event => {
+  if (event.target === teflDialog) teflDialog.close();
+});
+</script>
+
+
+
+</body></html>
