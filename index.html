@@ -157,6 +157,20 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     color: rgb(35 141 178);
   }
   .wheat{color: wheat; }
+.pulse {
+  background-color: #742b2b;
+  
+  animation: pulse-bg 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-bg {
+  from {
+    background-color: #1d1717;
+  }
+  to {
+    background-color: #954949;
+  }
+}
 
 </style><style></style></head>
 
@@ -176,6 +190,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <li><a href="#about" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;about&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Обо мне</a></li>
       <li><a href="#reviews" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;reviews&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Отзывы</a></li>
       <li><a href="#contact" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;contact&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Контакты</a></li>
+      <li><a href="booking/index.html" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s===&#39;contact&#39;?&#39;on !text-zinc-900 dark:!text-white&#39;:&#39;&#39;">Расписание</a></li>
     </ul>
 
     <div class="flex items-center gap-3">
@@ -226,7 +241,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           Hi. I'm Alex <span class="text-accent">Алексадр</span>
         </h1>
         <p class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10 in">
-          Помогаю структурировать знания <i>английского языка</i>, <strong class="font-medium text-zinc-700 dark:text-zinc-300">ликвидировать пробелы в грамматике и выстроить путь к пониманию и использованию языка.</strong>Предлагаю услуги — от разовых консультаций до системных 150-дневных программ.
+          Помогаю структурировать знания <i>английского языка</i>, <strong class="font-medium text-zinc-700 dark:text-zinc-300">ликвидировать пробелы в грамматике и выстроить путь к пониманию и использованию языка. </strong>Предлагаю услуги — от разовых консультаций до системных 150-дневных программ.
         </p>
         <div class="reveal d3 flex flex-wrap gap-4 in">
           <a href="#work" class="shimmer inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm">
@@ -236,7 +251,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           <a href="#contact" class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-sm">Связь</a>
         </div>
         <div class="reveal d4 flex gap-8 mt-14 pt-8 border-t border-zinc-100 dark:border-zinc-900">
-          <button type="button" class="tefl_modal cursor-pointer text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-haspopup="dialog" aria-controls="tefl-dialog">
+          <button type="button" class="tefl_modal cursor-pointer pulse text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-haspopup="dialog" aria-controls="tefl-dialog">
             <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">TEFL</p>
             <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Сертификат</p>
           </button>
@@ -416,7 +431,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           Я Алексадр, персональный репетитор английского языка и просто хороший человек.) . Я знаю что обучение — это не просто зубрежка материала, а создание рабочей системы, подстроенной под ваши задачи и скорость восприятия.
         </p>
         <p class="reveal d3 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">
-          Я знаю что обучение — это не просто зубрежка материала, а создание рабочей системы, подстроенной под ваши задачи и скорость восприятия.
+          Я знаю что обучение — это не просто зубрежка материала, а создание рабочей системы, подстроенной под ваши задачи и скорость восприятия. В основном использую коммуникативный подход, PPP, TBT, но всё же предпочитаю <big style="color: #b84343;">эклектический</big> метод (когда сочетаются несклько направлений).
         </p>
         <div class="reveal d4">
           <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">методы &amp; подходы</p>
